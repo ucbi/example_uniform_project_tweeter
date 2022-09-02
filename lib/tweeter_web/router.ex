@@ -17,16 +17,8 @@ defmodule TweeterWeb.Router do
   scope "/", TweeterWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
-  end
-
-  scope "/tweeter", TweeterWeb do
-    pipe_through :browser
-
     live "/", TweetsLive, :tweets
   end
-  
-
 
   if Mix.env() in [:dev, :test] do
     import Phoenix.LiveDashboard.Router

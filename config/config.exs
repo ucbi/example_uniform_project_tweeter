@@ -7,7 +7,6 @@
 # General application configuration
 import Config
 
-
 config :tweeter,
   ecto_repos: [Tweeter.Repo]
 
